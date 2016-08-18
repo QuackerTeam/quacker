@@ -1,0 +1,10 @@
+C:\Projetos\TemPraJa\src\Quacker.Common\bin\Debug\Quacker.Common.dll
+C:\Projetos\TemPraJa\src\Quacker.Common\bin\Debug\Quacker.Common.pdb
+C:\Projetos\TemPraJa\src\Quacker.Common\obj\Debug\Quacker.Common.csprojResolveAssemblyReference.cache
+C:\Projetos\TemPraJa\src\Quacker.Common\obj\Debug\Quacker.Common.dll
+C:\Projetos\TemPraJa\src\Quacker.Common\obj\Debug\Quacker.Common.pdb
+C:\Projetos\Quacker\Quacker.Common\bin\Debug\Quacker.Common.dll
+C:\Projetos\Quacker\Quacker.Common\bin\Debug\Quacker.Common.pdb
+C:\Projetos\Quacker\Quacker.Common\obj\Debug\Quacker.Common.csprojResolveAssemblyReference.cache
+C:\Projetos\Quacker\Quacker.Common\obj\Debug\Quacker.Common.dll
+C:\Projetos\Quacker\Quacker.Common\obj\Debug\Quacker.Common.pdb

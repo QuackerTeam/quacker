@@ -1,0 +1,10 @@
+C:\Projetos\TemPraJa\src\Quacker.Filtering\obj\Debug\Quacker.Filtering.csprojResolveAssemblyReference.cache
+C:\Projetos\TemPraJa\src\Quacker.Filtering\bin\Debug\Quacker.Filtering.dll
+C:\Projetos\TemPraJa\src\Quacker.Filtering\bin\Debug\Quacker.Filtering.pdb
+C:\Projetos\TemPraJa\src\Quacker.Filtering\bin\Debug\Quacker.Common.dll
+C:\Projetos\TemPraJa\src\Quacker.Filtering\bin\Debug\Quacker.Common.pdb
+C:\Projetos\TemPraJa\src\Quacker.Filtering\obj\Debug\Quacker.Filtering.dll
+C:\Projetos\TemPraJa\src\Quacker.Filtering\obj\Debug\Quacker.Filtering.pdb
+C:\Projetos\Quacker\Quacker.Filtering\obj\Debug\Quacker.Filtering.csprojResolveAssemblyReference.cache
+C:\Projetos\Quacker\Quacker.Filtering\obj\Debug\Quacker.Filtering.dll
+C:\Projetos\Quacker\Quacker.Filtering\obj\Debug\Quacker.Filtering.pdb
