@@ -3,3 +3,8 @@ C:\Projetos\Quacker\Nuget.Quacker.Common\bin\Release\Nuget.Quacker.Common.pdb
 C:\Projetos\Quacker\Nuget.Quacker.Common\obj\Release\Nuget.Quacker.Common.csprojResolveAssemblyReference.cache
 C:\Projetos\Quacker\Nuget.Quacker.Common\obj\Release\Nuget.Quacker.Common.dll
 C:\Projetos\Quacker\Nuget.Quacker.Common\obj\Release\Nuget.Quacker.Common.pdb
+C:\Projetos\quacker\src\Nuget.Quacker.Common\bin\Release\Nuget.Quacker.Common.dll
+C:\Projetos\quacker\src\Nuget.Quacker.Common\bin\Release\Nuget.Quacker.Common.pdb
+C:\Projetos\quacker\src\Nuget.Quacker.Common\obj\Release\Nuget.Quacker.Common.csprojResolveAssemblyReference.cache
+C:\Projetos\quacker\src\Nuget.Quacker.Common\obj\Release\Nuget.Quacker.Common.dll
+C:\Projetos\quacker\src\Nuget.Quacker.Common\obj\Release\Nuget.Quacker.Common.pdb

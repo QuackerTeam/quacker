@@ -4,3 +4,9 @@ C:\Projetos\Quacker\Quacker.Filtering\bin\Release\Quacker.Common.dll
 C:\Projetos\Quacker\Quacker.Filtering\obj\Release\Quacker.Filtering.csprojResolveAssemblyReference.cache
 C:\Projetos\Quacker\Quacker.Filtering\obj\Release\Quacker.Filtering.dll
 C:\Projetos\Quacker\Quacker.Filtering\obj\Release\Quacker.Filtering.pdb
+C:\Projetos\quacker\src\Quacker.Filtering\obj\Release\Quacker.Filtering.csprojResolveAssemblyReference.cache
+C:\Projetos\quacker\src\Quacker.Filtering\obj\Release\Quacker.Filtering.dll
+C:\Projetos\quacker\src\Quacker.Filtering\obj\Release\Quacker.Filtering.pdb
+C:\Projetos\quacker\src\Quacker.Filtering\bin\Release\Quacker.Filtering.dll
+C:\Projetos\quacker\src\Quacker.Filtering\bin\Release\Quacker.Filtering.pdb
+C:\Projetos\quacker\src\Quacker.Filtering\bin\Release\Quacker.Common.dll

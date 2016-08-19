@@ -3,3 +3,8 @@ C:\Projetos\Quacker\NuGet.Quacker.Filtering\bin\Release\NuGet.Quacker.Filtering.
 C:\Projetos\Quacker\NuGet.Quacker.Filtering\obj\Release\NuGet.Quacker.Filtering.csprojResolveAssemblyReference.cache
 C:\Projetos\Quacker\NuGet.Quacker.Filtering\obj\Release\NuGet.Quacker.Filtering.dll
 C:\Projetos\Quacker\NuGet.Quacker.Filtering\obj\Release\NuGet.Quacker.Filtering.pdb
+C:\Projetos\quacker\src\NuGet.Quacker.Filtering\bin\Release\NuGet.Quacker.Filtering.dll
+C:\Projetos\quacker\src\NuGet.Quacker.Filtering\bin\Release\NuGet.Quacker.Filtering.pdb
+C:\Projetos\quacker\src\NuGet.Quacker.Filtering\obj\Release\NuGet.Quacker.Filtering.csprojResolveAssemblyReference.cache
+C:\Projetos\quacker\src\NuGet.Quacker.Filtering\obj\Release\NuGet.Quacker.Filtering.dll
+C:\Projetos\quacker\src\NuGet.Quacker.Filtering\obj\Release\NuGet.Quacker.Filtering.pdb

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Quacker.Filtering.Interfaces
 {
@@ -12,5 +13,7 @@ namespace Quacker.Filtering.Interfaces
     public interface IFilteredList<TEntity> : IEnumerable<IFilteredEnumerableItem<TEntity>>
     {
         List<TEntity> GetSourceList();
+
+        IFilteredList<TDestination> Map<TDestination>(Func<TEntity, TDestination> mapFunc);
     }
 }

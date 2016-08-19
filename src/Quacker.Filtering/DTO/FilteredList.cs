@@ -31,5 +31,8 @@ namespace Quacker.Filtering.DTO
 
         public List<TEntity> GetSourceList()
             => _source.Select(i => i.Item).ToList();
+
+        public IFilteredList<TDestination> Map<TDestination>(Func<TEntity, TDestination> mapFunc)
+            => new FilteredList<TDestination>(_source.Select(i => (IFilteredEnumerableItem<TDestination>)new FilteredEnumerableItem<TDestination>(mapFunc(i.Item), i.Relevance)).ToList(), Count);
     }
 }
