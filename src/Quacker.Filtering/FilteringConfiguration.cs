@@ -1,4 +1,5 @@
-﻿using Quacker.Filtering.Interfaces;
+﻿using Quacker.Common.Helpers.Extensions;
+using Quacker.Filtering.Interfaces;
 using System;
 using System.Linq;
 using System.Reflection;
@@ -9,11 +10,11 @@ namespace Quacker.Filtering
     {
         public void RegisterAssembly(Assembly assembly)
         {
-            foreach (var type in assembly.GetTypes().Where(t => t.IsSubclassOf(typeof(Filter)) && !t.IsAbstract))
-                RegisterFilter((Filter)Activator.CreateInstance(type));
+            foreach (var type in assembly.GetTypes().Where(t => t.IsSubclassOfRawGeneric(typeof(Filter<>)) && !t.IsAbstract))
+                RegisterFilter((IFilter)Activator.CreateInstance(type));
         }
 
-        public void RegisterFilter(Filter filter)
+        public void RegisterFilter(IFilter filter)
             => filter?.Configure();
     }
 }

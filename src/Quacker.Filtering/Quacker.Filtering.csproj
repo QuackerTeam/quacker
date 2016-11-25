@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DTO\OrderData.cs" />
     <Compile Include="DTO\FilterData.cs" />
     <Compile Include="DTO\FilteredList.cs" />
     <Compile Include="DTO\FilteredEnumerable.cs" />
@@ -43,6 +44,7 @@
     <Compile Include="Helpers\Extensions\FilteredEnumerableExtensions.cs" />
     <Compile Include="Helpers\Extensions\EnumerableExtensions.cs" />
     <Compile Include="Helpers\FilteringStorage.cs" />
+    <Compile Include="Interfaces\IOrderData.cs" />
     <Compile Include="Interfaces\IFilteredList.cs" />
     <Compile Include="Interfaces\IFilteredEnumerableItem.cs" />
     <Compile Include="Interfaces\IFilter.cs" />
@@ -53,7 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Quacker.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Quacker.Common.1.0.0\lib\Quacker.Common.dll</HintPath>
+      <HintPath>..\packages\Quacker.Common.1.0.2\lib\Quacker.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

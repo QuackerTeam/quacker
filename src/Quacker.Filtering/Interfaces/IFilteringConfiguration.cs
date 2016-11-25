@@ -4,7 +4,7 @@ namespace Quacker.Filtering.Interfaces
 {
     public interface IFilteringConfiguration
     {
-        void RegisterFilter(Filter filter);
+        void RegisterFilter(IFilter filter);
 
         void RegisterAssembly(Assembly assembly);
     }

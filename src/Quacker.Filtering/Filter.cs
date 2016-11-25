@@ -10,47 +10,42 @@ using System.Reflection;
 
 namespace Quacker.Filtering
 {
-    public abstract class Filter : IFilter
+    public abstract class Filter<TEntity> : IFilter<TEntity>, IFilter
+            where TEntity : class
     {
-        public void CreateFilter<TEntity>(Func<TEntity, object[]> filterFields = null,
+        public void CreateFilter(Func<TEntity, object[]> filterFields = null,
                                           Dictionary<string, ParameterAction<TEntity>> paramActions = null,
                                           FilterMode filterMode = FilterMode.SimpleSearch)
-            where TEntity : class
             => CreateFilter(null, filterFields, paramActions, filterMode);
 
-        public void CreateFilter<TEntity>(string filterName,
+        public void CreateFilter(string filterName,
                                           Dictionary<string, ParameterAction<TEntity>> paramActions,
                                           FilterMode filterMode = FilterMode.SimpleSearch)
-            where TEntity : class
             => CreateFilter(filterName, null, paramActions, filterMode);
 
-        public void CreateFilter<TEntity>(Dictionary<string, ParameterAction<TEntity>> paramActions,
+        public void CreateFilter(Dictionary<string, ParameterAction<TEntity>> paramActions,
                                           FilterMode filterMode = FilterMode.SimpleSearch)
-            where TEntity : class
             => CreateFilter(null, null, paramActions, filterMode);
 
-        public void CreateFilter<TEntity>(FilterMode filterMode) where TEntity : class
-            => CreateFilter<TEntity>(null, null, null, filterMode);
+        public void CreateFilter(FilterMode filterMode)
+            => CreateFilter(null, null, null, filterMode);
 
-        public void CreateFilter<TEntity>(Func<TEntity, object[]> filterFields,
+        public void CreateFilter(Func<TEntity, object[]> filterFields,
                                           FilterMode filterMode)
-            where TEntity : class
             => CreateFilter(null, filterFields, null, filterMode);
 
-        public void CreateFilter<TEntity>(string filterName,
+        public void CreateFilter(string filterName,
                                           Func<TEntity, object[]> filterFields,
                                           FilterMode filterMode)
-            where TEntity : class
             => CreateFilter(filterName, filterFields, null, filterMode);
 
-        public void CreateFilter<TEntity>(string filterName, FilterMode filterMode) where TEntity : class
-            => CreateFilter<TEntity>(filterName, null, null, filterMode);
+        public void CreateFilter(string filterName, FilterMode filterMode)
+            => CreateFilter(filterName, null, null, filterMode);
 
-        public void CreateFilter<TEntity>(string filterName = null,
+        public void CreateFilter(string filterName = null,
                                           Func<TEntity, object[]> filterFields = null,
                                           Dictionary<string, ParameterAction<TEntity>> paramActions = null,
                                           FilterMode filterMode = FilterMode.SimpleSearch)
-            where TEntity : class
         {
             if (string.IsNullOrEmpty(filterName))
                 filterName = "DefaultFilter";
@@ -71,6 +66,17 @@ namespace Quacker.Filtering
                 ParameterActions = new NormalizedDictionary<ParameterAction<TEntity>>(paramActions),
                 FilterMode = filterMode
             });
+        }
+
+        public void CreateOrder(string orderName,
+                                         Func<IFilteredEnumerableItem<TEntity>, object> orderFn)
+        {
+            if (string.IsNullOrEmpty(orderName))
+                throw new ArgumentNullException(nameof(orderName));
+            if (orderFn == null)
+                throw new ArgumentNullException(nameof(orderFn));
+
+            FilteringStorage.RegisterOrder(orderName, orderFn);
         }
 
         public abstract void Configure();

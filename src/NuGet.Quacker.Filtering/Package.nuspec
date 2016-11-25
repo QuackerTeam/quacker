@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Quacker.Filtering</id>
-    <version>1.0.5</version>
+    <version>1.1.6</version>
     <title>Quacker.Filtering</title>
     <authors>Quacker Team</authors>
     <owners></owners>
@@ -21,7 +21,7 @@
     <copyright>Copyright  2016</copyright>
     <dependencies>
         <group targetFramework="net40">
-          <dependency id="Quacker.Common" version="1.0.1" />
+          <dependency id="Quacker.Common" version="1.0.2" />
         </group>
     </dependencies>
     <references></references>

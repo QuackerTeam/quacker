@@ -5,43 +5,44 @@ using System.Collections.Generic;
 
 namespace Quacker.Filtering.Interfaces
 {
-    internal interface IFilter
+    public interface IFilter
     {
-        void CreateFilter<TEntity>(string filterName = null,
+        void Configure();
+    }
+
+    internal interface IFilter<TEntity>
+            where TEntity : class
+    {
+        void CreateFilter(string filterName = null,
                                    Func<TEntity, object[]> filterFields = null,
                                    Dictionary<string, ParameterAction<TEntity>> paramActions = null,
-                                   FilterMode filterMode = FilterMode.SimpleSearch)
-            where TEntity : class;
+                                   FilterMode filterMode = FilterMode.SimpleSearch);
 
-        void CreateFilter<TEntity>(Func<TEntity, object[]> filterFields = null,
+        void CreateFilter(Func<TEntity, object[]> filterFields = null,
                                    Dictionary<string, ParameterAction<TEntity>> paramActions = null,
-                                   FilterMode filterMode = FilterMode.SimpleSearch)
-            where TEntity : class;
+                                   FilterMode filterMode = FilterMode.SimpleSearch);
 
-        void CreateFilter<TEntity>(Func<TEntity, object[]> filterFields,
-                                   FilterMode filterMode)
-            where TEntity : class;
+        void CreateFilter(Func<TEntity, object[]> filterFields,
+                                   FilterMode filterMode);
 
-        void CreateFilter<TEntity>(string filterName,
+        void CreateFilter(string filterName,
                                    Func<TEntity, object[]> filterFields,
-                                   FilterMode filterMode)
-            where TEntity : class;
+                                   FilterMode filterMode);
 
-        void CreateFilter<TEntity>(string filterName,
-                                   FilterMode filterMode)
-            where TEntity : class;
+        void CreateFilter(string filterName,
+                                   FilterMode filterMode);
 
-        void CreateFilter<TEntity>(string filterName,
+        void CreateFilter(string filterName,
                                    Dictionary<string, ParameterAction<TEntity>> paramActions,
-                                   FilterMode filterMode = FilterMode.SimpleSearch)
-            where TEntity : class;
+                                   FilterMode filterMode = FilterMode.SimpleSearch);
 
-        void CreateFilter<TEntity>(Dictionary<string, ParameterAction<TEntity>> paramActions,
-                                   FilterMode filterMode = FilterMode.SimpleSearch)
-            where TEntity : class;
+        void CreateFilter(Dictionary<string, ParameterAction<TEntity>> paramActions,
+                                   FilterMode filterMode = FilterMode.SimpleSearch);
 
-        void CreateFilter<TEntity>(FilterMode filterMode)
-            where TEntity : class;
+        void CreateFilter(FilterMode filterMode);
+
+        void CreateOrder(string orderName,
+                                         Func<IFilteredEnumerableItem<TEntity>, object> orderFn);
 
         void Configure();
     }

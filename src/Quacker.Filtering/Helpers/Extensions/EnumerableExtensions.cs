@@ -26,17 +26,24 @@ namespace Quacker.Filtering.Helpers.Extensions
 
         private static Func<IFilteredEnumerableItem<TEntity>, object> SetSortBy<TEntity>(string sortBy)
         {
-            var orderByProp = TypeDescriptor.GetProperties(typeof(TEntity)).Find(sortBy ?? "", true);
-            Func<IFilteredEnumerableItem<TEntity>, object> orderFn = null;
-            if (sortBy.Trim().ToLower() == "relevance")
-                orderFn = i => i.Relevance;
-            else if (orderByProp != null)
-                orderFn = e => orderByProp.GetValue(e.Item);
+            try
+            {
+                return FilteringStorage.GetOrder<TEntity>(sortBy).OrderFn;
+            }
+            catch
+            {
+                var orderByProp = TypeDescriptor.GetProperties(typeof(TEntity)).Find(sortBy ?? "", true);
+                Func<IFilteredEnumerableItem<TEntity>, object> orderFn = null;
+                if (sortBy.Trim().ToLower() == "relevance")
+                    orderFn = i => i.Relevance;
+                else if (orderByProp != null)
+                    orderFn = e => orderByProp.GetValue(e.Item);
 
-            if (orderFn == null)
-                throw new InvalidOperationException($"Property not found: {sortBy} in entity {typeof(TEntity).FullName}");
+                if (orderFn == null)
+                    throw new InvalidOperationException($"Property not found: {sortBy} in entity {typeof(TEntity).FullName}");
 
-            return orderFn;
+                return orderFn;
+            }
         }
 
         public static IFilteredEnumerable<TEntity> Filter<TEntity>(this IEnumerable<TEntity> source,
